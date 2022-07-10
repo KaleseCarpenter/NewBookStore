@@ -1,8 +1,10 @@
 const express = require ("express");
 const router = express.Router();
-const Book = require("../model/Book")
-const booksController = require("../controllers/books-controller")
-router.get("/", booksController.getAllBooks);
-router.post("/", booksController.addBook);
+const Book = require("../model/Book");
+const booksController = require("../controllers/books-controller");
+
+router.get("/", booksController.getAllBooks); // to get all books
+router.post("/", booksController.addBook); // to add a book
+router.get("/:id", booksController.getById); // to get book by id
 
 module.exports = router;
