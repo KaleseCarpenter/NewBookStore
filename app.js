@@ -1,14 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
+const router = require("./routes/book-routes")
 const app = express();
 
 // Middlewares
+app.use(express.json());
+app.use("/books", router)// localhost:5000/books
 
-app.use("/", (req, res, next) => {
-    res.send("This is the start of the book store app")
 
-});
 mongoose.connect("mongodb+srv://admin:PieMouth354321@cluster0.vkbwm.mongodb.net/myBookStore?retryWrites=true&w=majority"
 )
 .then(() => console.log("Connected To Database"))
@@ -20,3 +19,5 @@ console.log("Hello World!!");
 
 
 // PieMouth354321
+
+// stopped at 16:46
