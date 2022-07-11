@@ -6,7 +6,7 @@ const Header = () => {
     const [value, setValue] = useState();
   return (
     <div>
-        <AppBar sx={{backgroundColor: "#232F3D"}} position="sticky">
+        <AppBar sx={{backgroundColor: "#CD5360"}} position="sticky">
             <Toolbar>
                 <Typography>
                     <MenuBookIcon />
