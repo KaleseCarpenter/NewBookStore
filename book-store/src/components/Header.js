@@ -8,9 +8,11 @@ const Header = () => {
     <div>
         <AppBar sx={{backgroundColor: "#CD5360"}} position="sticky">
             <Toolbar>
-                <Typography>
-                    <MenuBookIcon />
-                </Typography>  
+                <NavLink to="/" style={{color: "#438496"}}> {/* figure out how to change logo color*/}
+                    <Typography>
+                        <MenuBookIcon />
+                    </Typography> 
+                </NavLink>
                 <Tabs 
                 sx={{ ml: "auto" }}// moves margin of tabs to the right, add css inline
                 textColor="inherit" 
