@@ -1,8 +1,26 @@
+import { Button, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>Welcome to the Home Page</div>
+    <div>
+      <Box display="flex" flexDirection="column" alignItems="center">
+        <Button 
+        LinkComponent={Link} 
+        to="/books" 
+        sx={{marginTop: 15, background:"#B37D4E"}} 
+        variant="contained"
+        >
+          <Typography variant="h3">
+            View All Books
+
+          </Typography>
+        </Button>
+
+      </Box>
+    </div>
   )
 }
 
