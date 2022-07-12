@@ -13,7 +13,7 @@ const BookDetail = () => {
         const fetchHandler = async() => {
             await axios
             .get(`http://localhost:5000/books/${id}`)
-            .then((res) => res.data).then(data=>setInputs(data.book));;
+            .then((res) => res.data).then(data=>setInputs(data.book));
         }; 
         fetchHandler()
     }, [id]);
@@ -31,6 +31,7 @@ const BookDetail = () => {
 
     }
 
+    //Submit and update book
     const handleSubmit = (e) => {
         e.preventDefault();
         sendRequest().then(() => history("/books"));
