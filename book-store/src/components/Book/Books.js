@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-
+import "./Book.css";
 import axios from "axios"
 import Book from "./Book";
 // import api server
@@ -22,9 +22,9 @@ const Books = () => {
     <div>
         <ul>
             {books && books.map((book, i) => (
-                <div key={i}>
+                <li key={i}>
                     <Book book={book}/>
-                </div>
+                </li>
 
             ))}
         </ul>
