@@ -4,9 +4,9 @@ import React, { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom";
 
 const BookDetail = () => {
-    const [inputs, setInputs] = useState({});
+    const [inputs, setInputs] = useState();
     const id = useParams().id;
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(false); // it has false here for when I update the available button
     const history = useNavigate();
     // console.log(id);
     useEffect(() => {
@@ -15,7 +15,7 @@ const BookDetail = () => {
             .get(`http://localhost:5000/books/${id}`)
             .then((res) => res.data).then(data=>setInputs(data.book));
         }; 
-        fetchHandler()
+        fetchHandler();
     }, [id]);
 
     //Send updated book request to book section
@@ -26,17 +26,18 @@ const BookDetail = () => {
             description: String(inputs.description),
             price: Number(inputs.price),
             image: String(inputs.image),
-            available:Boolean(checked)
+            available:Boolean(checked),
         }).then(res => res.data);
 
     }
 
-    //Submit and update book
+    //Update book and Submit
     const handleSubmit = (e) => {
         e.preventDefault();
         sendRequest().then(() => history("/books"));
+        
     };
-    //this handles change when updating the book
+    //this handles change when updating the book in the form
     const handleChange = (e) => {
         setInputs((prevState) => ({
             ...prevState,
@@ -44,10 +45,11 @@ const BookDetail = () => {
         }));
 
     };
-    // console.log(inputs);
+    console.log(inputs);
 
     return (
     <div>
+        {/*only render the form when you have inputs */}
         { inputs && (
         <form onSubmit={handleSubmit}>
         <Box 

@@ -23,7 +23,7 @@ const Books = () => {
         <ul>
             {books && books.map((book, i) => (
                 <li key={i}>
-                    <Book book={book}/>
+                    <Book book={book}/> {/* Have to remove the Unordered list so the dots will go away */}
                 </li>
 
             ))}

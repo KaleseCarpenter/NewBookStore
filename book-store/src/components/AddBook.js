@@ -36,8 +36,9 @@ const sendRequest = async() => {
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  console.log(inputs, checked);
-  sendRequest().then(() => history("/books"));
+  // console.log(inputs, checked);
+  // sendRequest().then("/books"); // changed this to below
+  sendRequest().then(()=> window.location ="/books"); // changed this to redirect back to new page after adding book 
 };
 
   return (

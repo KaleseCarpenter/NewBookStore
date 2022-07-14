@@ -21,7 +21,7 @@ const Header = () => {
                 onChange={(e, val) => setValue(val)}
                 >
                     <Tab LinkComponent={NavLink} to="/books" label="Books" />{/* This Link Component changes the route in index.js when clicked on */}
-                    <Tab LinkComponent={NavLink} to="/add" label="Add Product" />
+                    <Tab LinkComponent={NavLink} to="/add" label="Add Book" />
                     <Tab LinkComponent={NavLink} to="/about" label="About Us" />
                 </Tabs>
             </Toolbar> 
