@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>{/* This changes the route when clicked on */}
-  <React.StrictMode>
+  <React.StrictMode> {/*Verify the deprecated methods are not being used, and if they're used strict mode will warn you in the console. */}
     <App />
   </React.StrictMode>
   </BrowserRouter>

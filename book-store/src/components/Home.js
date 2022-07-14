@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
 
+//This is the Home Page
 const Home = () => {
   return (
     <div>
@@ -14,7 +15,7 @@ const Home = () => {
         variant="contained"
         >
           <Typography variant="h3">
-            View All Books
+          Welcome to Pink Robin's Book Store
 
           </Typography>
         </Button>
