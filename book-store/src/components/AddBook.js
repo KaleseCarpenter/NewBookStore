@@ -15,10 +15,10 @@ const AddBook = () => {
     author: "",
     image:""
   });
-const [checked, setChecked] = useState(false);
+const [checked, setChecked] = useState(false); // it is false to allow you to check the available button
   //Handle change of input
   const handleChange = (e) => {
-    setInputs((prevState) => ({
+    setInputs((prevState) => ({ // inputs first contain the previous state, then
     ...prevState,
     [e.target.name]: e.target.value,
    }));
