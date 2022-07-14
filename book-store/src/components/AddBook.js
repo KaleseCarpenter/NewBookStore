@@ -102,8 +102,8 @@ const handleSubmit = (e) => {
         name="image" 
         />
         
-        <FormControlLabel control={<Checkbox checked={checked} onChange={()=>setChecked(!checked)} />} label="Available" />
-        <Button variant="contained" type="submit">
+        <FormControlLabel control={<Checkbox checked={checked} onChange={()=>setChecked(!checked)}  />} label="Available" />
+        <Button variant="contained" type="submit" sx={{background:"#DE3886", mb:4, mt:3}}>
           Add Book
         </Button>
       </Box>

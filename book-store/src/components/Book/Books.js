@@ -3,7 +3,9 @@ import "./Book.css";
 import axios from "axios"
 import Book from "./Book";
 import { Typography } from "@mui/material";
-// import api server
+import pblogo1 from "../../images/PinkRbLogoWht1.png";
+
+// Import api server
 const URL = "http://localhost:5000/books"; 
 
 const fetchHandler = async() => {
@@ -17,13 +19,15 @@ const Books = () => {
 
         fetchHandler().then(data=>setBooks(data.books))
     }, []);
-    console.log(books);
+    // console.log(books);
 
   return (
     <div>
-        <Typography sx={{fontFamily:"fantasy", color:"#FDA4BA", marginTop: 8, marginBottom: 5}} variant="h1" display="flex" flexDirection="column" alignItems="center" >
-          Pink Robin's Books
-        </Typography>
+
+      <img src={pblogo1} alt="logo" className="center" />
+        {/* <Typography sx={{fontFamily:"fantasy", color:"#FDA4BA", marginTop: 8, marginBottom: 5}} variant="h1" display="flex" flexDirection="column" alignItems="center" >
+          Pink Robin Book Collection
+        </Typography> */}
         <ul>
             {/* Render all books by iterating over them*/}
             {books && books.map((book, i) => (

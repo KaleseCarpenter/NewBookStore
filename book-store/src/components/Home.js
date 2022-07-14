@@ -11,11 +11,11 @@ const Home = () => {
         <Button 
         LinkComponent={Link} 
         to="/books" 
-        sx={{marginTop: 15, background:"#B37D4E"}} 
+        sx={{marginTop: 15, background:"#DE3886"}} 
         variant="contained"
         >
           <Typography variant="h3">
-          Welcome to Pink Robin's Book Store
+          Welcome to Pink Robin Book Store
 
           </Typography>
         </Button>

@@ -45,7 +45,7 @@ const BookDetail = () => {
         }));
 
     };
-    console.log(inputs);
+    // console.log(inputs);
 
     return (
     <div>
@@ -110,7 +110,7 @@ const BookDetail = () => {
             />
             
             <FormControlLabel control={<Checkbox checked={checked} onChange={()=>setChecked(!checked)} />} label="Available" />
-            <Button variant="contained" type="submit">
+            <Button variant="contained" type="submit" sx={{background:"#DE3886", mb:4, mt:3}}>
             Update Book
             </Button>
         </Box>
