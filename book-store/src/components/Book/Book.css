@@ -48,6 +48,43 @@ li{
     margin: auto;
     margin-top: 3em;
     margin-bottom: 4em;
-    max-width: 35em;
-    max-height: 45em;
+    max-width: 30em;
+    max-height: 40em;
   }
+
+  /* .logo{
+        text-align: center;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-top: 55em;
+        margin: auto;
+        width:202%;
+        height: 202%;
+    
+  } */
+
+  .logo img{
+    max-width:26%;
+    max-height:26%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+
+#logo{
+    animation-name: floating;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+

@@ -1,13 +1,26 @@
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {Fragment, PureComponent} from "react";
+import { Link, NavLink } from "react-router-dom";
+import axios from "axios";
+import logo from "../images/pinkrobinbird.png"
+import clickmebutton from "../images/click_pink.png"
 
 //This is the Home Page
 const Home = () => {
   return (
-    <div>
-      <Box display="flex" flexDirection="column" alignItems="center">
+    <div className="">
+      <NavLink to="/books" className="home-button">
+        <a href="" className="logo">
+          <img className="clickMe" id="clickMe" src={clickmebutton} alt="clickMeButton"/>
+          <img className="logo" id="logo" src={logo} alt="pinkRobinLogo"/>
+          
+      
+        </a>
+
+      </NavLink>
+
+      {/* <Box display="flex" flexDirection="column" alignItems="center">
         <Button 
         LinkComponent={Link} 
         to="/books" 
@@ -20,7 +33,7 @@ const Home = () => {
           </Typography>
         </Button>
 
-      </Box>
+      </Box> */}
     </div>
   )
 }
