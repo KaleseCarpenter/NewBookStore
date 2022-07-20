@@ -15,11 +15,8 @@ API
 
 ## Screenshots
 
-![Home Page](/screenshots/1.png "Home Page")
+![Books Page](/New_Book_Store/Pink-Robin-Books.png "Home Page")
 
-![](/screenshots/2.png)
-
-![](/screenshots/3.png)
 
 ## Available Commands
 
@@ -50,18 +47,23 @@ For running the server file on you can use this command.
 
 ## Built With
 
+**_Frontend_**
+
 - React
 - React Hooks
-- Express
 - JavaScript
+- HTML
+- CSS
+- MaterialUI
+- Webpack
+
+**_Backend_**
+- Express
 - Node
 - Postman
 - MongoDB
 - NPM
-- Webpack
-- HTML
-- CSS
-- MaterialUI
+
 
 ## Future Updates
 
